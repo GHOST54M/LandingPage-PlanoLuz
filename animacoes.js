@@ -20,26 +20,57 @@ document.addEventListener("DOMContentLoaded", function () {
     ];
 
     let indice = 0;
+    const box = document.getElementById("avaliacaoBox");
 
-    const textoEl = document.getElementById("avaliacaoTexto");
-    const autorEl = document.getElementById("avaliacaoAutor");
+    function criarItem(avaliacao, classeInicial) {
+        const div = document.createElement("div");
+        div.className = "avaliacao-item " + classeInicial;
 
-    function mostrarAvaliacao() {
-        textoEl.textContent = avaliacoes[indice].texto;
-        autorEl.textContent = avaliacoes[indice].autor;
+        div.innerHTML = `
+            <p class="avaliacao-texto cor-texto-azul">${avaliacao.texto}</p>
+            <p class="avaliacao-avaliador cor-texto-azul">${avaliacao.autor}</p>
+        `;
+
+        return div;
     }
 
-    mostrarAvaliacao();
+    function trocar(direcao) {
+        const atual = box.querySelector(".avaliacao-item");
 
-    document.querySelector(".seta-esquerda").addEventListener("click", () => {
-        indice--;
-        if (indice < 0) indice = avaliacoes.length - 1;
-        mostrarAvaliacao();
+        const proximo = criarItem(
+            avaliacoes[indice],
+            direcao === "direita" ? "slide-in-right" : "slide-in-left"
+        );
+
+        box.appendChild(proximo);
+
+        // Garante que o navegador registre os estilos iniciais antes de animar
+        requestAnimationFrame(() => {
+            proximo.classList.add("slide-active");
+
+            if (atual) {
+                atual.classList.add(
+                    direcao === "direita" ? "slide-out-left" : "slide-out-right"
+                );
+
+                setTimeout(() => {
+                    atual.remove();
+                }, 450);
+            }
+        });
+    }
+
+    // Mostrar inicial
+    box.appendChild(criarItem(avaliacoes[indice], "slide-active"));
+
+    // Setas
+    document.querySelector(".seta-direita").addEventListener("click", () => {
+        indice = (indice + 1) % avaliacoes.length;
+        trocar("direita");
     });
 
-    document.querySelector(".seta-direita").addEventListener("click", () => {
-        indice++;
-        if (indice > avaliacoes.length - 1) indice = 0;
-        mostrarAvaliacao();
+    document.querySelector(".seta-esquerda").addEventListener("click", () => {
+        indice = (indice - 1 + avaliacoes.length) % avaliacoes.length;
+        trocar("esquerda");
     });
 });

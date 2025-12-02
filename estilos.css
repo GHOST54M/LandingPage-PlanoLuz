@@ -209,6 +209,52 @@ ul li{
 .seta-esquerda{
 	transform: rotate(180deg);
 }
+
+#avaliacaoBox {
+    position: relative;
+    overflow: hidden;
+}
+
+/* Item que entra na box */
+.avaliacao-item {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 240px;
+    margin: 15px;
+    opacity: 0;
+    transform: translateX(0);
+    transition: transform 0.45s ease, opacity 0.45s ease;
+}
+
+/* Slide IN da direita (vem da direita → entra) */
+.slide-in-right {
+    transform: translateX(100%);
+}
+
+/* Slide IN da esquerda (vem da esquerda → entra) */
+.slide-in-left {
+    transform: translateX(-100%);
+}
+
+/* Quando ativado, ele aparece no centro */
+.slide-active {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Slide OUT indo para a esquerda (sai para a esquerda) */
+.slide-out-left {
+    opacity: 0;
+    transform: translateX(-100%);
+}
+
+/* Slide OUT indo para a direita (sai para a direita) */
+.slide-out-right {
+    opacity: 0;
+    transform: translateX(100%);
+}
+
 .avaliacao-texto{
 	margin-top: 10px;
 }
