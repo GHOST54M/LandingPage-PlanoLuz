@@ -1,0 +1,245 @@
+:root {
+--cor-primaria: #13114E;
+--cor-secundaria: #F4B52E;
+--cor-terciaria:#F7F7FF;
+--cor-branco: #FFFFFF;
+}
+
+.cor-de-fundo-principal{
+background-color: var(--cor-primaria);
+
+}
+
+.cor-de-fundo-secundaria{
+background-color: var(--cor-secundaria);
+
+}
+
+.cor-de-fundo-terciaria{
+background-color: var(--cor-terciaria);
+
+}
+
+.cor-texto-azul{
+color: var(--cor-primaria);
+}
+
+.cor-texto-amarelo{
+color: var(--cor-secundaria);
+}
+.cor-texto-branco{
+color: var(--cor-branco);
+}
+
+.titulo{
+	font-size: 23px;
+	font-weight: 700;
+	text-align: center;
+	margin-bottom: 10px;
+}
+
+.texto{
+	font-size: 17px;
+	text-align: center;
+}
+
+.sombra{
+	box-shadow: -1px 1px 11px 1px rgba(0,0,0,0.78);
+	-webkit-box-shadow: -1px 1px 11px 1px rgba(0,0,0,0.78);
+	-moz-box-shadow: -1px 1px 11px 1px rgba(0,0,0,0.78);
+}
+
+.secao-chamada1{
+	display: flex;
+	align-items: center;
+	margin: 15px;
+	height: 170px;
+}
+
+.logo-plano-luz{
+	padding-top:30px;
+	width: 100%;
+}
+
+.grupo-botao{
+	display: flex;
+    flex-direction: column;
+    align-self: flex-end;
+}
+
+.botao-link-app{
+	width: 150px;
+	margin: 4.5px;
+}
+
+.texto-secao-chamada1{
+	margin: 10px;
+	align-self: flex-start;
+}
+
+.secao-beneficios{
+	display: flex;
+	flex-direction: column;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+.agrupamento-secao-beneficios{
+	display: flex;
+	justify-content: space-around;
+
+}
+.lista-beneficios{
+	align-self: center;
+
+}
+ul li:not(:last-child){
+	margin-bottom: 10px;
+}
+
+.imagem-secao-beneficios{
+	width: 160px;
+	border-radius: 15px;
+    background: linear-gradient(to right, rgba(17,17,17,0.8), rgba(17,17,17,0));
+    backdrop-filter: blur(8px); /* desfoca o que está atrás */
+    -webkit-backdrop-filter: blur(8px);
+}
+
+.secao-tutorial{
+	display: flex;
+	flex-direction: column;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+.secao-tutorial-passo-a-passo{
+	display: flex;
+	justify-content:space-around;
+	margin-top:30px ;
+}
+
+.secao-tutorial-passo{
+	width: 92px;
+	height: 100px;
+	padding: 10px;
+	border-radius: 15px;
+	box-shadow: 0px 10px 23px -3px rgba(0,0,0,0.55);
+	-webkit-box-shadow: 0px 10px 23px -3px rgba(0,0,0,0.55);
+	-moz-box-shadow: 0px 10px 23px -3px rgba(0,0,0,0.55);
+	font-size: 12.5px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-evenly;
+
+}
+.secao-tutorial-texto-motivador{
+	margin-top: 40px;
+	margin-bottom: 30px;
+	font-size: 17px;
+	text-align: center;
+	width: 250px;
+	align-self: center;
+
+}
+
+.imagem-secao-tutorial{
+	width: 60px;
+}
+
+.secao-avaliacao{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+.avaliacao{
+	border-radius: 15px;
+	width: 242px;
+	z-index: 2;
+	margin-top: 40px;
+}
+.avaliacao-texto{
+	font-size: 15px;
+	padding: 30px;
+	text-align: center;
+}
+.avaliacao-avaliador{
+	text-align: center;
+	font-size: 15px;
+	padding-bottom: 30px;
+}
+
+.imagem-secao-avaliacoes-esquerda{
+	width: 50px;
+	position: absolute;
+	left: 50px;
+	transform: rotate(180deg);
+	z-index: 1;
+	margin-top: 40px;
+}
+
+.imagem-secao-avaliacoes-direita{
+	width: 50px;
+	position: absolute;
+	right: 50px;
+	z-index: 1;
+	margin-top: 40px;
+}
+.secao-avaliacoes-fonte{
+	font-size: 12px;
+	right: 90px;
+	margin: 30px;
+}
+
+.secao-familia{
+	display: flex;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+.imagem-secao-familia{
+	width: 160px;
+	border-radius: 15px;
+}
+.secao-familia-texto{
+	margin-left: 10px;
+}
+.secao-ultima-chamada{
+	display: flex;
+}
+.secao-familia-titulo{
+	position: absolute;
+	margin-top: 20px;
+}
+.imagem-secao-ultima-chamada{
+	width: 220px;
+	margin-top: 30px;
+}
+.info{
+	display: contents;
+}
+.posicionamento{
+	position: absolute;
+}
+.secao-ultima-chamada-texto{
+	margin-top: 100px;
+}
+.texto-footer{
+	font-size: 12px;
+}
+.informacoes-empresa > p{
+	margin:3px;
+}
+.informacoes-empresa{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-top: 25px;
+	margin-bottom: 25px;
+}
+@media(min-width: 768px){
+
+}
