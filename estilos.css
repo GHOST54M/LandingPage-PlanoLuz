@@ -5,7 +5,9 @@
 --cor-branco: #FFFFFF;
 
 }
-
+body {
+font-family: 'Gabarito', sans-serif;
+}
 .cor-de-fundo-principal{
 background-color: var(--cor-primaria);
 
@@ -195,8 +197,14 @@ ul li{
     width: 100%;
 }
 
+.setas{
+	width: 40px;
+	height: 40px;
+}
 .seta-esquerda, .seta-direita {
     width: 40px;
+    border: none;
+    background-color: var(--cor-secundaria);
     cursor: pointer;
     transition: transform .2s ease, opacity .2s ease;
 }
@@ -327,7 +335,8 @@ ul li{
 }
 
 .informacoes-empresa > p{
-	margin:3px;
+	margin-top:5px;
+	margin-bottom: 10px;
 }
 
 .informacoes-empresa{
