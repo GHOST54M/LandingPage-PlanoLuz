@@ -5,6 +5,25 @@
 --cor-branco: #FFFFFF;
 
 }
+@keyframes borda-brilhante {
+  0% {
+    box-shadow: 0 0 0px 2px red;
+  }
+  40% {
+    box-shadow: 0 0 25px 8px red;
+  }
+  60% {
+    box-shadow: 0 0 35px 12px #ff1a1a;
+  }
+  100% {
+    box-shadow: 0 0 0px 2px red;
+  }
+}
+
+.brilhar {
+  animation: borda-brilhante 1.5s ease-out;
+}
+
 body {
 font-family: 'Gabarito', sans-serif;
 }
@@ -83,11 +102,13 @@ box-shadow:
 	display: flex;
     flex-direction: column;
     align-self: flex-end;
+
 }
 
 .botao-link-app{
 	width: 150px;
 	margin: 4.5px;
+	border-radius: 7px;
 }
 
 .texto-secao-chamada1{
@@ -201,6 +222,14 @@ ul li{
 	width: 40px;
 	height: 40px;
 }
+
+.seta-esquerda{
+	margin-left: 10px;
+}
+
+.seta-direita{
+	margin-right: 10px;
+}
 .seta-esquerda, .seta-direita {
     width: 40px;
     border: none;
@@ -210,8 +239,8 @@ ul li{
 }
 
 .avaliacao {
-    width: 260px;
-    height: 130px;
+    width: 240px;
+    height: 140px;
     border-radius: 15px;
     padding: 20px;
     transition: opacity .4s ease;
@@ -230,8 +259,8 @@ ul li{
     position: absolute;
     top: 0;
     left: 0;
-    width: 240px;
-    margin: 16px;
+    width: 215px;
+    margin: 11px;
     opacity: 0;
     transform: translateX(0);
     transition: transform 0.45s ease, opacity 0.45s ease;
@@ -343,8 +372,8 @@ ul li{
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	margin-top: 25px;
-	margin-bottom: 25px;
+	padding-top: 25px;
+	padding-bottom: 25px;
 }
 
 @media(min-width: 667px){
@@ -492,7 +521,9 @@ ul li{
 	width: 300px;
 	margin-top: 40px;
 }
-
+.posicionamento{
+	margin-left: 185px;
+}
 .secao-ultima-chamada-texto{
 	font-size: 21px;
 	width: 350px;

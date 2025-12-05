@@ -55,21 +55,27 @@
             <div class="secao-chamada1">
 
                 <div class="grupo-botao">
+                    <p class="cor-texto-azul">Baixe o app:</p>
+                    
                     <!-- Botão Google Play -->
                     <a href="https://play.google.com/store/apps/details?id=com.planoluzapp&pcampaignid=web_share"
                        aria-label="Baixar o aplicativo Plano Luz na Google Play"
                        target="_blank" rel="noopener noreferrer"
-                       onclick="dataLayer.push({event:'app_download_click',store:'google_play',label:'principal'});">
+                       data-track="app_download"
+                       data-store="google_play"
+                       data-label="principal">
                         <img src="imagens/botao-google-play.webp" alt="Disponível na Google Play" class="botao-link-app" loading="lazy">
                     </a>
 
                     <!-- Botão App Store -->
-                    <a href="https://apps.apple.com/br/app/plano-luz-planos-funer%C3%A1rios/id6749597330"
-                       aria-label="Baixar o aplicativo Plano Luz na App Store"
-                       target="_blank" rel="noopener noreferrer"
-                       onclick="dataLayer.push({event:'app_download_click',store:'app_store',label:'principal'});">
-                        <img src="imagens/botao-app-store.webp" alt="Disponível na App Store" class="botao-link-app" loading="lazy">
-                    </a>
+                <a href="https://apps.apple.com/br/app/plano-luz-planos-funer%C3%A1rios/id6749597330"
+                   aria-label="Baixar o aplicativo Plano Luz na App Store"
+                   target="_blank" rel="noopener noreferrer"
+                   data-track="app_download"
+                   data-store="app_store"
+                   data-label="principal">
+                    <img src="imagens/botao-app-store.webp" alt="Disponível na App Store" class="botao-link-app" loading="lazy">
+                </a>
                 </div>
 
                 <div class="texto-secao-chamada1">
@@ -120,17 +126,17 @@
 
                     <div class="secao-tutorial-passo cor-texto-azul sombra">
                         <h3>Baixe o app</h3>
-                        <img src="imagens/secao-tutorial-download.svg" alt="Ícone para download do aplicativo" class="imagem-secao-tutorial">
+                        <a href="#play-store"><img src="imagens/secao-tutorial-download.svg" alt="Ícone para download do aplicativo" class="imagem-secao-tutorial"></a>
                     </div>
 
                     <div class="secao-tutorial-passo cor-texto-azul sombra">
                         <h3>Crie sua conta</h3>
-                        <img src="imagens/secao-tutorial-cadastro.webp" alt="Ícone representando cadastro no app" class="imagem-secao-tutorial">
+                        <a href="#play-store"><img src="imagens/secao-tutorial-cadastro.webp" alt="Ícone representando cadastro no app" class="imagem-secao-tutorial"></a>
                     </div>
 
                     <div class="secao-tutorial-passo cor-texto-azul sombra">
                         <h3>Contrate no app</h3>
-                        <img src="imagens/secao-tutorial-contrato.webp" alt="Ícone simbolizando contratação de plano" class="imagem-secao-tutorial">
+                        <a href="#play-store"><img src="imagens/secao-tutorial-contrato.webp" alt="Ícone simbolizando contratação de plano" class="imagem-secao-tutorial"></a>
                     </div>
 
                 </div>
@@ -195,20 +201,26 @@
                     <div class="grupo-botao posicionamento">
 
                         <!-- Botão Google Play (Footer) -->
-                        <a href="https://play.google.com/store/apps/details?id=com.planoluzapp&pcampaignid=web_share"
-                           aria-label="Baixar o aplicativo Plano Luz na Google Play"
-                           target="_blank" rel="noopener noreferrer"
-                           onclick="dataLayer.push({event:'app_download_click',store:'google_play',label:'footer'});">
-                            <img src="imagens/botao-google-play.webp" alt="Disponível na Google Play" class="botao-link-app" loading="lazy">
-                        </a>
+                    <a href="https://play.google.com/store/apps/details?id=com.planoluzapp&pcampaignid=web_share"
+                       aria-label="Baixar o aplicativo Plano Luz na Google Play"
+                       id="play-store" 
+                       target="_blank" rel="noopener noreferrer"
+                       data-track="app_download"
+                       data-store="google_play"
+                       data-label="footer">
+                        <img src="imagens/botao-google-play.webp" alt="Disponível na Google Play" class="botao-link-app" loading="lazy">
+                    </a>
 
                         <!-- Botão App Store (Footer) -->
-                        <a href="https://apps.apple.com/br/app/plano-luz-planos-funer%C3%A1rios/id6749597330"
-                           aria-label="Baixar o aplicativo Plano Luz na App Store"
-                           target="_blank" rel="noopener noreferrer"
-                           onclick="dataLayer.push({event:'app_download_click',store:'app_store',label:'footer'});">
-                            <img src="imagens/botao-app-store.webp" alt="Disponível na App Store" class="botao-link-app" loading="lazy">
-                        </a>
+                    <a href="https://apps.apple.com/br/app/plano-luz-planos-funer%C3%A1rios/id6749597330"
+                       aria-label="Baixar o aplicativo Plano Luz na App Store"
+                       id="app-store" 
+                       target="_blank" rel="noopener noreferrer"
+                       data-track="app_download"
+                       data-store="app_store"
+                       data-label="footer">
+                        <img src="imagens/botao-app-store.webp" alt="Disponível na App Store" class="botao-link-app" loading="lazy">
+                    </a>
                     </div>
 
                 </div>

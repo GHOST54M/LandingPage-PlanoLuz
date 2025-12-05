@@ -16,10 +16,15 @@ document.addEventListener("DOMContentLoaded", function () {
         {
             texto: "Atendimento excelente e muito atenciosos num momento tão delicado pra nós.",
             autor: "~ Ingrid Barbosa"
+        },
+        {
+            texto:"Eu super recomendo, fui muito atenciosos, carinhosos e sensíveis, super profissionais, destacar o cuidado que tem com pet e toda a sensibilidade com minha família, muito obrigada!",
+            autor: "~ Melissa"
         }
     ];
 
     let indice = 0;
+    let animando = false; // ⬅️ flag de controle
     const box = document.getElementById("avaliacaoBox");
 
     function criarItem(avaliacao, classeInicial) {
@@ -35,6 +40,9 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     function trocar(direcao) {
+        if (animando) return;      // ⬅️ Impede cliques durante animação
+        animando = true;
+
         const atual = box.querySelector(".avaliacao-item");
 
         const proximo = criarItem(
@@ -44,7 +52,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
         box.appendChild(proximo);
 
-        // Garante que o navegador registre os estilos iniciais antes de animar
         requestAnimationFrame(() => {
             proximo.classList.add("slide-active");
 
@@ -55,22 +62,73 @@ document.addEventListener("DOMContentLoaded", function () {
 
                 setTimeout(() => {
                     atual.remove();
+                    animando = false;   // ⬅️ Libera novas trocas somente após terminar a animação
                 }, 450);
+            } else {
+                animando = false;
             }
         });
     }
 
-    // Mostrar inicial
+    // Inicial
     box.appendChild(criarItem(avaliacoes[indice], "slide-active"));
 
     // Setas
     document.querySelector(".seta-direita").addEventListener("click", () => {
+        if (animando) return;
         indice = (indice + 1) % avaliacoes.length;
         trocar("direita");
     });
 
     document.querySelector(".seta-esquerda").addEventListener("click", () => {
+        if (animando) return;
         indice = (indice - 1 + avaliacoes.length) % avaliacoes.length;
         trocar("esquerda");
     });
 });
+
+// Animação de brilho 
+
+const links = document.querySelectorAll('a[href="#play-store"]');
+const destino = document.querySelector('#play-store');
+
+links.forEach(link => {
+    link.addEventListener('click', function(e) {
+        e.preventDefault();
+
+        destino.scrollIntoView({
+            behavior: 'smooth'
+        });
+
+        setTimeout(() => {
+            destino.classList.add('brilhar');
+
+            setTimeout(() => {
+                destino.classList.remove('brilhar');
+            }, 1500);
+        }, 600);
+    });
+});
+
+// Rastrear downloads do app
+
+document.addEventListener("DOMContentLoaded", () => {
+    const botoes = document.querySelectorAll('[data-track="app_download"]');
+
+    botoes.forEach(btn => {
+        btn.addEventListener("click", () => {
+            const store = btn.dataset.store;
+            const label = btn.dataset.label;
+
+            // Envia para o dataLayer com segurança
+            if (window.dataLayer) {
+                window.dataLayer.push({
+                    event: "app_download_click",
+                    store,
+                    label
+                });
+            }
+        });
+    });
+});
+
