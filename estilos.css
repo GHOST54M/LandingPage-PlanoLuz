@@ -230,20 +230,13 @@ ul li{
 .seta-direita{
 	margin-right: 10px;
 }
+
 .seta-esquerda, .seta-direita {
     width: 40px;
     border: none;
     background-color: var(--cor-secundaria);
     cursor: pointer;
     transition: transform .2s ease, opacity .2s ease;
-}
-
-.avaliacao {
-    width: 240px;
-    height: 140px;
-    border-radius: 15px;
-    padding: 20px;
-    transition: opacity .4s ease;
 }
 
 .seta-esquerda{
@@ -253,17 +246,32 @@ ul li{
 #avaliacaoBox {
     position: relative;
     overflow: hidden;
+    width: 220px;
+    height: 220px;
+    border-radius: 15px;
+    transition: opacity .4s ease;
 }
 
 .avaliacao-item {
-    position: absolute;
+	position: absolute;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	align-items: center;
+    width: 220px;
+    height: 200px;
     top: 0;
     left: 0;
-    width: 215px;
-    margin: 11px;
-    opacity: 0;
     transform: translateX(0);
     transition: transform 0.45s ease, opacity 0.45s ease;
+}
+
+.avaliacao-texto{
+	width: 210px;
+}
+
+.avaliacao-avaliador{
+	width: 210px;
 }
 
 .slide-in-right {
@@ -289,14 +297,6 @@ ul li{
     transform: translateX(100%);
 }
 
-.avaliacao-texto{
-	margin-top: 10px;
-}
-
-.avaliacao-avaliador{
-	margin-top: 10px;
-}
-
 .secao-avaliacoes-fonte {
     font-size: 16px;
     margin-top: 25px;
@@ -304,18 +304,42 @@ ul li{
 
 .secao-familia{
 	display: flex;
+	justify-content: space-evenly;
 
 }
 
 .imagem-secao-familia{
-	width: 150px;
-	border-radius: 20px;
+	width: 140px;
+	height: 140px;
+	border-radius: 15px;
 }
 
-.secao-familia-texto{
-	margin-left: 10px;
+.familia-texto-alinhamento{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }
 
+.lista-beneficios-familia{
+	width: 210px;
+	font-size: 12px;
+}
+
+.secao-pets-texto{
+	display: flex;
+	justify-content: space-evenly;
+}
+
+.secao-pets-texto > p{
+	width: 225px;
+	font-size: 12px;
+}
+
+.imagem-secao-pets{
+	width: 140px;
+	height: 188px;
+	border-radius: 15px;
+}
 .secao-ultima-chamada{
 	display: flex;
 	padding-right: 10px;
@@ -470,15 +494,14 @@ ul li{
 
 }
 
-.avaliacao {
-    width: 280px;
-    height: 200px;
-
+#avaliacaoBox{
+    width: 320px;
+    height: 280px;
 }
 
 .avaliacao-item {
-    width: 260px;
-    margin-left: 22px;
+    width: 320px;
+    height: 280px;
 
 }
 

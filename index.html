@@ -11,6 +11,22 @@
     </script>
     <!-- End Google Tag Manager -->
 
+    <!-- Meta Pixel Code -->
+    <script>
+      !function(f,b,e,v,n,t,s)
+      {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+      n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+      if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+      n.queue=[];t=b.createElement(e);t.async=!0;
+      t.src=v;s=b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t,s)}(window, document,'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
+
+      fbq('init', '1205081177546630');  
+      fbq('track', 'PageView');
+    </script>
+    <!-- End Meta Pixel Code -->
+
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -42,6 +58,13 @@
     </noscript>
     <!-- End Google Tag Manager (noscript) -->
 
+    <!-- Meta Pixel (noscript) -->
+    <noscript>
+      <img height="1" width="1" style="display:none"
+           src="https://www.facebook.com/tr?id=1205081177546630&ev=PageView&noscript=1"/>
+    </noscript>
+    <!-- End Meta Pixel (noscript) -->
+
     <header>
         <section class="secao-logo cor-de-fundo-principal">
             <img src="imagens/logo-plano-luz.webp" alt="Logo do Plano Luz" class="logo-plano-luz">
@@ -55,7 +78,7 @@
             <div class="secao-chamada1">
 
                 <div class="grupo-botao">
-                    <p class="cor-texto-azul">Baixe o app:</p>
+                    <p class="cor-texto-azul">Baixe o app e consulte nossos planos:</p>
                     
                     <!-- Botão Google Play -->
                     <a href="https://play.google.com/store/apps/details?id=com.planoluzapp&pcampaignid=web_share"
@@ -63,7 +86,9 @@
                        target="_blank" rel="noopener noreferrer"
                        data-track="app_download"
                        data-store="google_play"
-                       data-label="principal">
+                       data-label="principal"
+                       onclick="fbq('track','Lead');
+                                fbq('trackCustom','Download');">
                         <img src="imagens/botao-google-play.webp" alt="Disponível na Google Play" class="botao-link-app" loading="lazy">
                     </a>
 
@@ -73,7 +98,9 @@
                    target="_blank" rel="noopener noreferrer"
                    data-track="app_download"
                    data-store="app_store"
-                   data-label="principal">
+                   data-label="principal"
+                   onclick="fbq('track','Lead');
+                            fbq('trackCustom','Download');">
                     <img src="imagens/botao-app-store.webp" alt="Disponível na App Store" class="botao-link-app" loading="lazy">
                 </a>
                 </div>
@@ -81,7 +108,8 @@
                 <div class="texto-secao-chamada1">
                     <h1 class="titulo cor-texto-azul">Contrate seu plano</h1>
                     <p class="texto cor-texto-azul">
-                        Com o aplicativo Plano Luz você gerencia tudo direto da sua casa — sem filas e sem burocracia!
+                    "Proteção imediata para sua família — contrate seu plano funerário em minutos, direto do app."
+                    Sem burocracia! Sem filas!
                     </p>
                 </div>
 
@@ -144,6 +172,33 @@
                 <p class="cor-texto-azul secao-tutorial-texto-motivador">
                     Com o Plano Luz você compara planos, contrata e gerencia tudo diretamente pelo aplicativo.
                 </p>
+                    <p class="cor-texto-azul secao-tutorial-texto-motivador" >Clique no ícone e baixe agora o aplicativo:</p>
+
+                <div class="grupo-botao-tutorial">                    
+                    <!-- Botão Google Play -->
+                    <a href="https://play.google.com/store/apps/details?id=com.planoluzapp&pcampaignid=web_share"
+                       aria-label="Baixar o aplicativo Plano Luz na Google Play"
+                       target="_blank" rel="noopener noreferrer"
+                       data-track="app_download"
+                       data-store="google_play"
+                       data-label="tutorial"
+                       onclick="fbq('track','Lead');
+                                fbq('trackCustom','Download');">
+                        <img src="imagens/botao-google-play.webp" alt="Disponível na Google Play" class="botao-link-app" loading="lazy">
+                    </a>
+
+                    <!-- Botão App Store -->
+                <a href="https://apps.apple.com/br/app/plano-luz-planos-funer%C3%A1rios/id6749597330"
+                   aria-label="Baixar o aplicativo Plano Luz na App Store"
+                   target="_blank" rel="noopener noreferrer"
+                   data-track="app_download"
+                   data-store="app_store"
+                   data-label="tutorial"
+                   onclick="fbq('track','Lead');
+                            fbq('trackCustom','Download');">
+                    <img src="imagens/botao-app-store.webp" alt="Disponível na App Store" class="botao-link-app" loading="lazy">
+                </a>
+                </div>
 
             </div>
         </section>
@@ -163,7 +218,7 @@
                         <img src="imagens/secao-avaliacoes-seta-esquerda.svg" class="setas" alt="">
                     </button>
 
-                    <div id="avaliacaoBox" class="avaliacao cor-de-fundo-terciaria sombra"></div>
+                    <div id="avaliacaoBox" class="cor-de-fundo-terciaria sombra"></div>
 
                     <button class="seta-direita" aria-label="Próxima avaliação">
                         <img src="imagens/secao-avaliacoes-seta.svg" class="setas" alt="">
@@ -177,16 +232,34 @@
         </section>
 
         <!-- FAMÍLIA -->
-        <section class="container cor-de-fundo-terciaria sombra-interna">
+        <section class="container cor-de-fundo-terciaria">
             <div class="secao-familia">
 
                 <img src="imagens/secao-familia.webp" alt="Família protegida pelo plano" class="imagem-secao-familia" loading="lazy">
 
-                <div class="secao-familia-texto">
+                <div class="familia-texto-alinhamento">
                     <h2 class="titulo cor-texto-azul">Proteção para sua família!</h2>
-                    <p class="cor-texto-azul texto">Inclua quem você quiser no nosso plano família.</p>
+                    <ul class="lista-beneficios-familia cor-texto-azul">
+                        <li>Inclua pais, filhos, cônjuges e pessoas que você ama no mesmo plano.</li>
+                        <li>Economize ao reunir todos num só plano</li>
+                        <li><span class="cor-texto-amarelo"><strong>Baixe </strong></span> o app e faça agora a cotação!</li>
+                    </ul>
                 </div>
 
+            </div>
+        </section>
+
+        <!-- PETS -->
+        <section class="container cor-de-fundo-terciaria">
+            <div class="secao-pets">
+                <h2 class="titulo cor-texto-azul">Cuidado e dignidade também para quem é parte da família.</h2>
+                
+                <div class="secao-pets-texto">
+                <p class="cor-texto-azul texto texto-pets">Com o Plano Pet, você garante assistência completa para seu melhor amigo em momentos delicados — com respeito, carinho e total tranquilidade para sua família.</p>
+
+                <img src="imagens/secao-pets.webp" alt="Seu pet protegido pelo plano" class="imagem-secao-pets" loading="lazy">
+                
+                </div>
             </div>
         </section>
 
@@ -207,7 +280,9 @@
                        target="_blank" rel="noopener noreferrer"
                        data-track="app_download"
                        data-store="google_play"
-                       data-label="footer">
+                       data-label="footer"
+                       onclick="fbq('track','Lead');
+                                fbq('trackCustom','Download');">
                         <img src="imagens/botao-google-play.webp" alt="Disponível na Google Play" class="botao-link-app" loading="lazy">
                     </a>
 
@@ -218,7 +293,9 @@
                        target="_blank" rel="noopener noreferrer"
                        data-track="app_download"
                        data-store="app_store"
-                       data-label="footer">
+                       data-label="footer"
+                       onclick="fbq('track','Lead');
+                                fbq('trackCustom','Download');">
                         <img src="imagens/botao-app-store.webp" alt="Disponível na App Store" class="botao-link-app" loading="lazy">
                     </a>
                     </div>
@@ -230,7 +307,7 @@
                 </h2>
 
                 <p class="texto secao-ultima-chamada-texto cor-texto-branco">
-                    Baixe agora o aplicativo e tenha acesso a benefícios exclusivos, total controle do seu plano e suporte sempre que precisar.
+                    Proteção completa para sua família por um preço acessível. Baixe o app e contrate em menos de 5 minutos.
                 </p>
 
             </div>
@@ -256,10 +333,10 @@
                 <a href="tel:+552132685010">(21) 3268-5010</a>
             </p>
 
-            <p>Email de contato: <a href="mailto:contato@planoluz.com.br">contato@planoluz.com.br</a></p>
+            <p>Email de contato: <a href="mailto:contato@planoluz.com.br" target="_blank" rel="noopener noreferrer">contato@planoluz.com.br</a></p>
 
             <p>&copy; Plano Luz — Todos os direitos reservados</p>
-
+            <p><a href="https://www.planoluz.com.br/politica-de-privacidade/" target="_blank" rel="noopener noreferrer"> Política de Privacidade</p></a> | <a href="https://www.planoluz.com.br/termo/" target="_blank" rel="noopener noreferrer">Termos de uso</p>
         </div>
     </footer>
 
