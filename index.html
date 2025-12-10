@@ -78,7 +78,6 @@
             <div class="secao-chamada1">
 
                 <div class="grupo-botao">
-                    <p class="cor-texto-azul">Baixe o app e consulte nossos planos:</p>
                     
                     <!-- Botão Google Play -->
                     <a href="https://play.google.com/store/apps/details?id=com.planoluzapp&pcampaignid=web_share"
@@ -111,6 +110,17 @@
                     "Proteção imediata para sua família — contrate seu plano funerário em minutos, direto do app."
                     Sem burocracia! Sem filas!
                     </p>
+                    <a href="#" 
+                       aria-label="Baixar o aplicativo Plano Luz na Google Play"
+                       target="_blank" rel="noopener noreferrer"
+                       data-track="app_download"
+                       data-store="variavel"
+                       data-label="principal"
+                       onclick="fbq('track','Lead');
+                                fbq('trackCustom','Download');">
+                       
+                        <button class="botao-baixar sombra">Baixar app!</button>
+                    </a>
                 </div>
 
             </div>
@@ -154,52 +164,40 @@
 
                     <div class="secao-tutorial-passo cor-texto-azul sombra">
                         <h3>Baixe o app</h3>
-                        <a href="#play-store"><img src="imagens/secao-tutorial-download.svg" alt="Ícone para download do aplicativo" class="imagem-secao-tutorial"></a>
+                        <a href="#botao-download"><img src="imagens/secao-tutorial-download.svg" alt="Ícone para download do aplicativo" class="imagem-secao-tutorial"></a>
                     </div>
 
                     <div class="secao-tutorial-passo cor-texto-azul sombra">
                         <h3>Crie sua conta</h3>
-                        <a href="#play-store"><img src="imagens/secao-tutorial-cadastro.webp" alt="Ícone representando cadastro no app" class="imagem-secao-tutorial"></a>
+                        <a href="#botao-download"><img src="imagens/secao-tutorial-cadastro.webp" alt="Ícone representando cadastro no app" class="imagem-secao-tutorial"></a>
                     </div>
 
                     <div class="secao-tutorial-passo cor-texto-azul sombra">
                         <h3>Contrate no app</h3>
-                        <a href="#play-store"><img src="imagens/secao-tutorial-contrato.webp" alt="Ícone simbolizando contratação de plano" class="imagem-secao-tutorial"></a>
+                        <a href="#botao-download"><img src="imagens/secao-tutorial-contrato.webp" alt="Ícone simbolizando contratação de plano" class="imagem-secao-tutorial"></a>
                     </div>
 
                 </div>
-
+                <div class="tutorial-textos-botao">
                 <p class="cor-texto-azul secao-tutorial-texto-motivador">
                     Com o Plano Luz você compara planos, contrata e gerencia tudo diretamente pelo aplicativo.
                 </p>
                     <p class="cor-texto-azul secao-tutorial-texto-motivador" >Clique no ícone e baixe agora o aplicativo:</p>
 
-                <div class="grupo-botao-tutorial">                    
-                    <!-- Botão Google Play -->
-                    <a href="https://play.google.com/store/apps/details?id=com.planoluzapp&pcampaignid=web_share"
-                       aria-label="Baixar o aplicativo Plano Luz na Google Play"
+
+                    <a href="#" 
+                       aria-label="Baixar o aplicativo Plano Luz"
                        target="_blank" rel="noopener noreferrer"
+                       id="botao-download" 
                        data-track="app_download"
-                       data-store="google_play"
+                       data-store="variavel"
                        data-label="tutorial"
                        onclick="fbq('track','Lead');
                                 fbq('trackCustom','Download');">
-                        <img src="imagens/botao-google-play.webp" alt="Disponível na Google Play" class="botao-link-app" loading="lazy">
+                       
+                        <button class="botao-baixar sombra">Baixar app!</button>
                     </a>
-
-                    <!-- Botão App Store -->
-                <a href="https://apps.apple.com/br/app/plano-luz-planos-funer%C3%A1rios/id6749597330"
-                   aria-label="Baixar o aplicativo Plano Luz na App Store"
-                   target="_blank" rel="noopener noreferrer"
-                   data-track="app_download"
-                   data-store="app_store"
-                   data-label="tutorial"
-                   onclick="fbq('track','Lead');
-                            fbq('trackCustom','Download');">
-                    <img src="imagens/botao-app-store.webp" alt="Disponível na App Store" class="botao-link-app" loading="lazy">
-                </a>
-                </div>
-
+                    </div>
             </div>
         </section>
 
@@ -252,13 +250,19 @@
         <!-- PETS -->
         <section class="container cor-de-fundo-terciaria">
             <div class="secao-pets">
-                <h2 class="titulo cor-texto-azul">Cuidado e dignidade também para quem é parte da família.</h2>
-                
-                <div class="secao-pets-texto">
-                <p class="cor-texto-azul texto texto-pets">Com o Plano Pet, você garante assistência completa para seu melhor amigo em momentos delicados — com respeito, carinho e total tranquilidade para sua família.</p>
+                <h2 class="titulo cor-texto-azul secao-pets-titulo">Cuidado e dignidade também para quem é parte da família.</h2>
+                <div class="secao-pets-conteudo">
 
-                <img src="imagens/secao-pets.webp" alt="Seu pet protegido pelo plano" class="imagem-secao-pets" loading="lazy">
-                
+                <div class="secao-pets-texto">
+                    <p class="cor-texto-azul texto-pets">Com o Plano Pet, você garante assistência completa para seu melhor amigo em momentos delicados.</p>
+                    <ul class="lista-beneficios-pets cor-texto-azul">
+                        <li><img src="imagens/checked-F7F7FF.svg" class="pets-checked">Remoção do corpo</li>
+                        <li><img src="imagens/checked-F7F7FF.svg" class="pets-checked">Cremação ou sepultura</li>
+                        <li><img src="imagens/checked-F7F7FF.svg" class="pets-checked">Digital do Pet e itens para recordação</li>
+                    </ul>
+                </div>
+
+                <img src="imagens/secao-pets.webp" alt="Seu pet protegido pelo plano" class="imagem-secao-pets" loading="lazy">     
                 </div>
             </div>
         </section>
@@ -305,11 +309,23 @@
                 <h2 class="titulo secao-ultima-chamada-titulo cor-texto-amarelo">
                     Assistência funeral acessível, rápida e segura!
                 </h2>
-
+                <div class="alinhamento">
                 <p class="texto secao-ultima-chamada-texto cor-texto-branco">
                     Proteção completa para sua família por um preço acessível. Baixe o app e contrate em menos de 5 minutos.
                 </p>
 
+                    <a href="#" 
+                       aria-label="Baixar o aplicativo Plano Luz"
+                       target="_blank" rel="noopener noreferrer"
+                       data-track="app_download"
+                       data-store="variavel"
+                       data-label="footer"
+                       onclick="fbq('track','Lead');
+                                fbq('trackCustom','Download');">
+                       
+                        <button class="botao-baixar sombra">Baixar app!</button>
+                    </a>
+                </div>
             </div>
         </section>
 

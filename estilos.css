@@ -55,14 +55,14 @@ color: var(--cor-branco);
 }
 
 .titulo{
-	font-size: 23px;
+	font-size: 21px;
 	font-weight: 700;
 	text-align: center;
 	margin-bottom: 10px;
 }
 
 .texto{
-	font-size: 17px;
+	font-size: 14px;
 	text-align: center;
 }
 
@@ -81,6 +81,18 @@ box-shadow: 0px 12px 24px -6px rgba(0,0,0,0.55);
 box-shadow: 
 	inset 0 8px 8px -8px rgba(66, 68, 90, 1),
 	inset 0 -8px 8px -8px rgba(66, 68, 90, 1);
+}
+
+.botao-baixar{
+	width: 110px;
+	height: 35px;
+	background-color:var(--cor-secundaria);
+	color: var(--cor-branco);
+	border: none;
+	border-radius: 5px;
+	font-size: 16px;
+	font-weight: 700;
+	margin-top: 10px;
 }
 
 .secao-chamada1, .secao-beneficios, .secao-tutorial, .secao-avaliacao, .secao-familia{
@@ -113,7 +125,10 @@ box-shadow:
 
 .texto-secao-chamada1{
 	margin: 10px;
-	align-self: flex-start;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-evenly;
 }
 
 .secao-beneficios{
@@ -183,13 +198,19 @@ ul li{
 	background-color: var(--cor-branco);
 }
 
+.tutorial-textos-botao{
+	height: 200px;
+	margin-top: 10px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	align-items: center;
+}
+
 .secao-tutorial-texto-motivador{
-	margin-top: 40px;
-	margin-bottom: 30px;
 	font-size: 17px;
+	width: 280px;
 	text-align: center;
-	width: 250px;
-	align-self: center;
 
 }
 
@@ -303,36 +324,79 @@ ul li{
 }
 
 .secao-familia{
+	height: 170px;
 	display: flex;
-	justify-content: space-evenly;
-
-}
-
-.imagem-secao-familia{
-	width: 140px;
-	height: 140px;
-	border-radius: 15px;
+	justify-content: space-around;
+	align-items: flex-start;
 }
 
 .familia-texto-alinhamento{
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	justify-content: space-evenly;
+}
+
+.secao-familia-titulo{
+	width: 160px;
 }
 
 .lista-beneficios-familia{
-	width: 210px;
 	font-size: 12px;
+	width: 170px;
+}
+.lista-beneficios-familia > li:nth-child(3){
+	display: contents;
 }
 
-.secao-pets-texto{
+.imagem-secao-familia{
+	width: 140px;
+	height: 140px;
+	border-radius: 20px;
+}
+
+.secao-pets{
+	padding-top: 15px;
+	padding-bottom: 15px;
+	display: flex;
+    flex-direction: column;
+    align-items:center;
+}
+
+.secao-pets-titulo{
+	width: 380px;
+}
+
+.secao-pets-conteudo{
 	display: flex;
 	justify-content: space-evenly;
 }
 
-.secao-pets-texto > p{
+.secao-pets-texto{
 	width: 225px;
 	font-size: 12px;
+
+}
+
+.lista-beneficios-pets{
+	width: 140px;
+}
+
+.lista-beneficios-pets  > li > img {
+	margin-right: 5px;
+}
+
+.pets-checked{
+	width: 25px;
+	height: 25px;
+	background-color: var(--cor-secundaria);
+	border-radius: 4px;
+}
+
+.secao-pets-texto, .lista-beneficios-pets{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
 }
 
 .imagem-secao-pets{
@@ -340,23 +404,16 @@ ul li{
 	height: 188px;
 	border-radius: 15px;
 }
+
 .secao-ultima-chamada{
 	display: flex;
 	padding-right: 10px;
 	margin-bottom: 0px;
 }
 
-.secao-familia-titulo{
-	text-align: center;
-    width: 100%;	
-	position: absolute;
-	margin-top: 20px;
-
-}
-
 .imagem-secao-ultima-chamada{
 	width: 210px;
-	margin-top: 30px;
+	margin-top: 40px;
 }
 
 .info{
@@ -374,15 +431,26 @@ ul li{
 	display: flex;
 }
 
+.alinhamento{
+	display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
 .secao-ultima-chamada-texto{
+	margin-top: 10px;
 	font-size: 14px;
 	align-self: center;
 }
+
 .secao-ultima-chamada-titulo{
 	width: 100%;
 	position: absolute;
 	margin-top: 20px;
 }
+
 .texto-footer{
 	font-size: 12px;
 }
@@ -401,12 +469,19 @@ ul li{
 }
 
 @media(min-width: 667px){
+.botao-baixar{
+	width: 160px;
+	height: 50px;
+	font-size: 21px;
+
+}
+
 .titulo{
-	font-size: 32px;
+	font-size: 30px;
 }
 
 .texto{
-	font-size: 21px;
+	font-size: 18px;
 
 }
 
@@ -484,13 +559,12 @@ ul li{
 .imagem-secao-tutorial{
 	width: 80px;
 	height: 80px;
+
 }
 
 .secao-tutorial-texto-motivador{
-	margin-top: 40px;
-	margin-bottom: 30px;
 	font-size: 21px;
-	width: 320px;
+	width: 420px;
 
 }
 
@@ -519,11 +593,7 @@ ul li{
 
 .secao-familia{
 	justify-content: space-evenly;
-}
-
-.imagem-secao-familia{
-	width: 200px;
-	border-radius: 20px;
+	height: 190px;
 }
 
 .secao-familia-texto{
@@ -532,8 +602,43 @@ ul li{
     align-items: center;
 }
 
-.secao-familia-texto > .texto{
+.lista-beneficios-familia{
+	width: 300px;
+	height: 180px;
+	font-size: 18px;
+}
+
+.imagem-secao-familia{
 	width: 200px;
+	height: 200px;
+}
+
+.secao-pets{
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+.secao-pets-texto{
+	width: 340px;
+}
+
+.secao-pets-titulo{
+	width: 420px;
+}
+
+.texto-pets{
+	width: 350px;
+	font-size: 18px;
+}
+
+.lista-beneficios-pets{
+	width: 210px;
+	font-size: 18px;
+}
+
+.imagem-secao-pets{
+	width: 200px;
+	height: 270px;
 }
 
 .secao-ultima-chamada{
@@ -541,15 +646,18 @@ ul li{
 }
 
 .imagem-secao-ultima-chamada{
-	width: 300px;
+	width: 286px;
+	height: 270px;
 	margin-top: 40px;
 }
+
 .posicionamento{
 	margin-left: 185px;
 }
+
 .secao-ultima-chamada-texto{
-	font-size: 21px;
-	width: 350px;
+	font-size: 18px;
+	width: 272px;
 	align-self: center;
 }
 
@@ -565,6 +673,10 @@ ul li{
 	}
 	.secao-chamada1, .secao-beneficios, .secao-tutorial, .secao-avaliacao, .secao-familia, .secao-ultima-chamada{
 		width: 1200px;
+	}
+	.botao-baixar:hover{
+		cursor: pointer;
+
 	}
 .titulo{
 	font-size: 38px;
@@ -595,19 +707,75 @@ ul li{
 .imagem-secao-beneficios{
 	width: 300px;
 }
+
 .posicionamento{
 	margin-left: 327px;
 }
-.secao-ultima-chamada{
-justify-content: space-between;
+
+.secao-familia{
+	height: 250px;
 }
-.imagem-secao-ultima-chamada{
+
+.imagem-secao-familia{
+	width: 250px;
+	height: 250px;
+}
+
+.secao-familia-texto{
+	width: 450px;
+	font-size: 24px;
+}
+
+.lista-beneficios-familia{
 	width: 350px;
+	font-size: 24px;
 }
+
+.secao-pets-titulo{
+	width: 700px;
+}
+
+.secao-pets-conteudo{
+	width: 1100px;
+}
+
+.texto-pets{
+	width: 450px;
+	font-size: 24px;
+}
+
+.lista-beneficios-pets{
+	width: 350px;
+	font-size: 24px;
+}
+
+.imagem-secao-pets{
+	width: 260px;
+	height: 350px;
+}
+.secao-ultima-chamada{
+	justify-content: space-between;
+}
+
+.imagem-secao-ultima-chamada{
+	margin-top: 60px;
+	width: 370px;
+	height: 360px;
+
+}
+
+.alinhamento{
+	margin-right: 150px;
+}
+
 .secao-ultima-chamada-titulo{
 	width: 1200px;
 	position: absolute;
 	margin-top: 20px;
+}
+.secao-ultima-chamada-texto{
+	width: 320px;
+	font-size: 21px;
 }
 
 }
