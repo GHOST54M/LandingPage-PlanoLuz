@@ -27,6 +27,7 @@
 body {
 font-family: 'Gabarito', sans-serif;
 }
+
 .cor-de-fundo-principal{
 background-color: var(--cor-primaria);
 
@@ -92,11 +93,11 @@ box-shadow:
 	border-radius: 5px;
 	font-size: 16px;
 	font-weight: 700;
-	margin-top: 10px;
+	padding: 5px;
 }
 
 .secao-chamada1, .secao-beneficios, .secao-tutorial, .secao-avaliacao, .secao-familia{
-	padding:21px 7px;
+	padding:30px 5px;
 } 
 
 .secao-chamada1{
@@ -129,6 +130,10 @@ box-shadow:
 	flex-direction: column;
 	align-items: center;
 	justify-content: space-evenly;
+}
+
+.texto-secao-chamada1 > p {
+	margin-bottom: 15px;
 }
 
 .secao-beneficios{
@@ -441,6 +446,7 @@ ul li{
 
 .secao-ultima-chamada-texto{
 	margin-top: 10px;
+	margin-bottom: 15px;
 	font-size: 14px;
 	align-self: center;
 }
@@ -742,6 +748,12 @@ ul li{
 .texto-pets{
 	width: 450px;
 	font-size: 24px;
+}
+
+.pets-checked{
+	width: 35px;
+	height: 35px;
+	margin-right: 10px;
 }
 
 .lista-beneficios-pets{

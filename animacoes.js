@@ -87,28 +87,26 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
-// Animação de brilho 
-
-const links = document.querySelectorAll('a[href="#play-store"]');
-const destino = document.querySelector('#play-store');
+// Animação de brilho
+const links = document.querySelectorAll('a[href="#botao-download"]');
+const destino = document.querySelector('#botao-download');
 
 links.forEach(link => {
-    link.addEventListener('click', function(e) {
-        e.preventDefault();
+    link.addEventListener('click', function (e) {
+        e.preventDefault(); // impede o comportamento de rolar até o anchor
 
-        destino.scrollIntoView({
-            behavior: 'smooth'
-        });
+        if (!destino) return; // segurança
 
+        // Aplica brilho imediatamente
+        destino.classList.add('brilhar');
+
+        // Remove após 1.5s
         setTimeout(() => {
-            destino.classList.add('brilhar');
-
-            setTimeout(() => {
-                destino.classList.remove('brilhar');
-            }, 1500);
-        }, 600);
+            destino.classList.remove('brilhar');
+        }, 1500);
     });
 });
+
 
 // Rastrear downloads do app
 
@@ -132,3 +130,17 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 
+function redirecionarParaLoja(){
+    const userAgent = navigator.userAgent || navigator.vendor || window.opera;
+
+    const linkPlayStore ="https://play.google.com/store/apps/details?id=com.planoluzapp&pcampaignid=web_share";
+    const linkAppStore = "https://apps.apple.com/br/app/plano-luz-planos-funer%C3%A1rios/id6749597330";
+
+    if(/android/i.test(userAgent)){
+        window.location.href = linkPlayStore;
+    } else if(/iPad|iPhone|iPod/.test(userAgent) && ! window.MSStream){
+        window.location.href = linkAppStore;
+    } else{
+        window.location.href = linkPlayStore;
+    }
+}
