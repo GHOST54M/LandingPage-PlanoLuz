@@ -24,8 +24,8 @@
   animation: borda-brilhante 1.5s ease-out;
 }
 
-body {
-font-family: 'Gabarito', sans-serif;
+*{
+font-family: "Plus Jakarta Sans", sans-serif;
 }
 
 .cor-de-fundo-principal{
@@ -68,8 +68,7 @@ color: var(--cor-branco);
 }
 
 .sombra{
--webkit-box-shadow: 0px 12px 24px -6px rgba(0,0,0,0.55); 
-box-shadow: 0px 12px 24px -6px rgba(0,0,0,0.55);
+	box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.2);
 }
 
 .sombra-interna{
@@ -85,43 +84,39 @@ box-shadow:
 }
 
 .botao-baixar{
-	width: 110px;
-	height: 35px;
+	width: 155px;
+	height: 60px;
 	background-color:var(--cor-secundaria);
 	color: var(--cor-branco);
 	border: none;
-	border-radius: 5px;
-	font-size: 16px;
-	font-weight: 700;
-	padding: 5px;
+	border-radius: 10px;
+	font-size: 24px;
+	font-weight: 600;
+	padding: 8px;
+	margin-bottom: 20px;
 }
 
-.secao-chamada1, .secao-beneficios, .secao-tutorial, .secao-avaliacao, .secao-familia{
+.secao-chamada1,.secao-planoluz,.secao-comofunciona,.secao-apoioemocional, .secao-beneficios, .secao-tutorial, .secao-avaliacao, .secao-familia{
 	padding:30px 5px;
 } 
-
-.secao-chamada1{
-	display: flex;
-	align-items: center;
-	height: 170px;
-}
 
 .logo-plano-luz{
 	padding-top:30px;
 	width: 100%;
+	border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
 
-.grupo-botao{
+.secao-chamada1{
 	display: flex;
-    flex-direction: column;
-    align-self: flex-end;
-
+	flex-direction: column;
+	align-items: center;
 }
 
-.botao-link-app{
-	width: 150px;
-	margin: 4.5px;
-	border-radius: 7px;
+.titulo-secaoch1{
+	font-size: 34px;
+	font-weight: 600;
+	text-align: center;
+	margin-bottom: 20px;
 }
 
 .texto-secao-chamada1{
@@ -134,6 +129,170 @@ box-shadow:
 
 .texto-secao-chamada1 > p {
 	margin-bottom: 15px;
+	font-size: 18px;
+	font-weight: 300;
+
+}
+
+.grupo-botao{
+	display: flex;
+}
+
+.botao-link-app{
+	width: 130px;
+	margin: 6px;
+	border-radius: 4px;
+}
+
+.secao-planoluz{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.titulo-plano-luz{
+	font-size: 34px;
+	margin-top: 40px;
+}
+
+.texto-planoluz{
+	width: 280px;
+	font-size: 18px;
+	text-align: center;
+
+}
+.celular {
+  display: inline-block;
+  margin-top: 15px;
+  margin-bottom: 15px;
+
+}
+
+.imagem-aplicativo {
+  width: 230px; /* ajuste se quiser */
+  border-radius:20px;
+  border: 5px solid grey;
+  animation: flutuar 3s ease-in-out infinite;
+}
+
+@keyframes flutuar {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.beneficio{
+	width: 320px;
+	border-radius: 15px;
+	height: 60px;
+	margin:15px;
+	background-color: ;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-weight: 600;
+	font-size: 18px;
+	box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.2);
+	border: 1px solid rgba(255, 255, 255, 0.1);
+}
+.beneficio {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 16px;
+}
+
+.beneficio {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 16px;
+}
+
+/* Estilo base do ícone */
+.beneficio i {
+    width: 38px;
+    height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 17px;
+}
+
+/* BRASIL */
+.beneficio-brasil i {
+    background-color: #eafaf1; /* verde claro */
+    color: #27ae60;           /* verde forte */
+}
+
+/* GRUPO */
+.beneficio-grupo i {
+    background-color: #ebf5fb; /* azul claro */
+    color: #2980b9;            /* azul forte */
+}
+
+/* CASA */
+.beneficio-casa i {
+    background-color: #fef5e7; /* laranja claro */
+    color: #e67e22;            /* laranja forte */
+}
+
+.secao-tutorial{
+	display: flex;
+	flex-direction: column;
+
+}
+.titulo-secao-tutorial{
+	font-size: 30px;
+	font-weight: 600;
+	text-align: center;
+}
+.secao-tutorial-passo-a-passo{
+	display: flex;
+	justify-content:space-around;
+	margin-top:30px ;
+}
+
+.secao-tutorial-passo{
+	width: 90px;
+	height: 110px;
+	padding: 10px;
+	border-radius: 15px;
+	font-size: 14px;
+	font-weight: 600;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-evenly;
+	background-color: var(--cor-branco);
+}
+
+.tutorial-textos-botao{
+	height: 200px;
+	margin-top: 10px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	align-items: center;
+}
+
+.secao-tutorial-texto-motivador{
+	font-size: 18px;
+	width: 300px;
+	text-align: center;
+
+}
+
+.imagem-secao-tutorial{
+	width: 50px;
+	height: 50px;
 }
 
 .secao-beneficios{
@@ -176,52 +335,6 @@ ul li{
     background: linear-gradient(to right, rgba(17,17,17,0.8), rgba(17,17,17,0));
     backdrop-filter: blur(8px); /* desfoca o que está atrás */
     -webkit-backdrop-filter: blur(8px);
-}
-
-.secao-tutorial{
-	display: flex;
-	flex-direction: column;
-
-}
-
-.secao-tutorial-passo-a-passo{
-	display: flex;
-	justify-content:space-around;
-	margin-top:30px ;
-}
-
-.secao-tutorial-passo{
-	width: 85px;
-	height: 110px;
-	padding: 10px;
-	border-radius: 15px;
-	font-size: 11.2px;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: space-evenly;
-	background-color: var(--cor-branco);
-}
-
-.tutorial-textos-botao{
-	height: 200px;
-	margin-top: 10px;
-	display: flex;
-	flex-direction: column;
-	justify-content: space-evenly;
-	align-items: center;
-}
-
-.secao-tutorial-texto-motivador{
-	font-size: 17px;
-	width: 280px;
-	text-align: center;
-
-}
-
-.imagem-secao-tutorial{
-	width: 50px;
-	height: 50px;
 }
 
 .secao-avaliacao {
@@ -347,8 +460,8 @@ ul li{
 }
 
 .lista-beneficios-familia{
-	font-size: 12px;
-	width: 170px;
+	font-size: 13px;
+	width: 180px;
 }
 .lista-beneficios-familia > li:nth-child(3){
 	display: contents;
@@ -473,7 +586,27 @@ ul li{
 	padding-top: 25px;
 	padding-bottom: 25px;
 }
-
+@media(max-width: 360px){
+	.secao-tutorial-passo	{
+		width: 75px;
+		height: 90px;
+		font-size: 	10px;
+	}
+	#avaliacaoBox{
+		width:160px;
+		height: 260px;
+	}
+	.avaliacao-item{
+		width: 160px;
+		height: 260px;
+	}
+	.avaliacao-texto{
+		width: 150px;
+	}
+	.avaliacao-avaliador{
+		width: 150px;
+	}
+}
 @media(min-width: 667px){
 .botao-baixar{
 	width: 160px;
