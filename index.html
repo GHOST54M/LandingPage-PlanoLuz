@@ -79,21 +79,24 @@
                 <div class="texto-secao-chamada1">
                     <h1 class="titulo-secaoch1 cor-texto-branco"><span class="cor-texto-amarelo">Proteção familiar</span> na palma da sua mão!</h1>
                     <p class="texto cor-texto-branco">
-                    Com o aplicativo Plano Luz obtenha proteção para sua família contrate seu plano funerário em minutos, direto do app. 
+                    Com o aplicativo Plano Luz obtenha proteção para sua família, contrate seu plano funerário em minutos <span class="cor-texto-amarelo">sem custo de portabilidade!</span> 
                     </p>
                     <p class="texto cor-texto-branco">Sem burocracia! Sem filas!</p>
-                    <a aria-label="Baixar o aplicativo Plano Luz na Google Play"
-                       rel="noopener noreferrer"
-                       data-track="app_download"
-                       data-store="variavel"
-                       data-label="principal"
-                       onclick="fbq('track','Lead');
-                                fbq('trackCustom','Download');
-                                redirecionarParaLoja()">
-                       
-                        <button class="botao-baixar sombra">Baixar app!</button>
-                    </a>
-                                    <div class="grupo-botao">
+                    <p class="planos cor-texto-branco">Planos a partir de <span class="preco cor-texto-amarelo">R$29,00</span></p>
+                    <button
+                        type="button"
+                        class="botao-baixar sombra"
+                        aria-label="Baixar o aplicativo Plano Luz"
+                        data-track="app_download"
+                        data-store="variavel"
+                        data-label="principal"
+                        onclick="
+                            fbq('track','Download');
+                            redirecionarParaLoja();
+                        ">
+                        Baixar app!
+                    </button>
+                <div class="grupo-botao">
 
                     <!-- Botão App Store -->
                 <a href="https://apps.apple.com/br/app/plano-luz-planos-funer%C3%A1rios/id6749597330"
@@ -130,61 +133,77 @@
 
         <section class="container" style="background-color: #020038;">
             <div class="secao-planoluz">
-                <h2 class="titulo titulo-plano-luz cor-texto-branco">O que é o Plano luz?</h2>
-                <p class="texto-planoluz cor-texto-branco">Assistência funeral completa, com a menor taxa de reajuste do Brasil com cobertura em todo o país.</p>
-        <div class="lista-definicao cor-texto-branco">
+                <h2 class="titulo-plano-luz cor-texto-branco">O que é o Plano luz?</h2>
+                <p class="texto-planoluz cor-texto-branco">Assistência funeral completa, com a menor taxa de reajuste do Brasil e cobertura em todo o país.</p>
+            <div class="lista-definicao cor-texto-branco">
 
                 <div class="beneficio beneficio-brasil">
                     <i class="fa-solid fa-map-location-dot"></i>
-                    Cobertura em todo o Brasil
+                    <h5 class="titulo-benef">Cobertura em todo o Brasil</h5>
+                    <p class="desc-beneficio">Atendemos em todas as regiões do país.</p>
                 </div>
 
                 <div class="beneficio beneficio-grupo">
-                        <i class="fa-solid fa-user-plus"></i>
-                    Inclua familiares e amigos
+                    <i class="fa-solid fa-user-plus"></i>
+                    <h5 class="titulo-benef">Inclua familiares e amigos</h5>
+                    <p class="desc-beneficio">Adicione familiares e pessoas sem vínculo familiar ao mesmo plano que você</p>
                 </div>
 
                 <div class="beneficio beneficio-casa">
                     <i class="fa-solid fa-house-circle-check"></i>
-                    Contrate da sua casa
+                    <h5 class="titulo-benef">Contrate da sua casa</h5>
+                    <p class="desc-beneficio">Faça tudo diretamente pelo aplicativo sem sair de casa</p>
                 </div>
 
-        </div>
+            <div class="beneficio beneficio-vida">
+                <i class="fa-solid fa-shield-heart"></i>
+                <h5 class="titulo-benef">Benefícios em vida</h5>
+                <p class="desc-beneficio">
+                    Seguro de vida para acidentes de até <span class="cor-texto-amarelo">R$ 10.000</span> e descontos em consultas psicológicas.
+                </p>
+            </div>
+            </div>
             </div>
 
         </section>
 
         <!-- TUTORIAL -->
-        <section class="container cor-de-fundo-terciaria sombra-interna">
+        <section class="container cor-de-fundo-principal">
             <div class="secao-tutorial">
 
-                <h2 class="titulo-secao-tutorial cor-texto-azul">
+                <h2 class="titulo-secao-tutorial cor-texto-branco">
                     <span class="cor-texto-amarelo">TUDO</span> em um só app!
                 </h2>
 
                 <div class="secao-tutorial-passo-a-passo">
+                <div class="secao-tutorial-passo cor-texto-branco sombra">
+                    <h3>Baixe o app</h3>
+                    <a href="#botao-download" class="icone-tutorial tutorial-download">
+                        <i class="fa-solid fa-download"></i>
+                    </a>
+                </div>
 
-                    <div class="secao-tutorial-passo cor-texto-azul sombra">
-                        <h3>Baixe o app</h3>
-                        <a href="#botao-download"><img src="imagens/secao-tutorial-download.svg" alt="Ícone para download do aplicativo" class="imagem-secao-tutorial"></a>
-                    </div>
+                <div class="secao-tutorial-passo cor-texto-branco sombra">
+                    <h3>Cadastre-se</h3>
+                    <a href="#botao-download" class="icone-tutorial tutorial-cadastro">
+                        <i class="fa-solid fa-user-check"></i>
+                    </a>
+                </div>
 
-                    <div class="secao-tutorial-passo cor-texto-azul sombra">
-                        <h3>Cadastre-se</h3>
-                        <a href="#botao-download"><img src="imagens/secao-tutorial-cadastro.webp" alt="Ícone representando cadastro no app" class="imagem-secao-tutorial"></a>
-                    </div>
+                <div class="secao-tutorial-passo cor-texto-branco sombra">
+                    <h3>Contrate</h3>
+                    <a href="#botao-download" class="icone-tutorial tutorial-contrato">
+                        <i class="fa-solid fa-file-signature"></i>
+                    </a>
+                </div>
 
-                    <div class="secao-tutorial-passo cor-texto-azul sombra">
-                        <h3>Contrate</h3>
-                        <a href="#botao-download"><img src="imagens/secao-tutorial-contrato.webp" alt="Ícone simbolizando contratação de plano" class="imagem-secao-tutorial"></a>
-                    </div>
 
                 </div>
                 <div class="tutorial-textos-botao">
-                <p class="cor-texto-azul secao-tutorial-texto-motivador">
-                    Com o aplicativo do Plano Luz você compara planos, contrata e gerencia tudo diretamente pelo aplicativo.
+                <p class="cor-texto-branco secao-tutorial-texto-motivador">
+                    Com o aplicativo do Plano Luz você, contrata e gerencia tudo diretamente pelo seu celular.
                 </p>
-                    <p class="cor-texto-azul secao-tutorial-texto-motivador" >Proteja quem você ama e baixe agora o aplicativo:</p>
+                    <p class="cor-texto-branco secao-tutorial-texto-motivador" >Proteja quem você ama e baixe agora o aplicativo:</p>
 
 
                     <a 
@@ -209,20 +228,20 @@
             <div class="secao-avaliacao">
 
                 <div class="cabecalho-avaliacao">
-                    <h2 class="titulo cor-texto-azul">O que dizem nossos clientes </h2>
-                    <p class="texto cor-texto-azul">Pessoas que usam e confiam no Plano Luz:</p>
+                    <h2 class="titulo-secao-avaliacao cor-texto-azul">O que dizem nossos clientes </h2>
+                    <p class="subtitulo-avaliacao cor-texto-azul">Pessoas que usam e confiam no Plano Luz:</p>
                 </div>
 
                 <div class="carrossel" role="region" aria-label="Carrossel de avaliações">
 
                     <button class="seta-esquerda" aria-label="Avaliação anterior">
-                        <img src="imagens/secao-avaliacoes-seta-esquerda.svg" class="setas" alt="">
+                        <img src="imagens/secao-avaliacoes-seta-esquerda.svg" class="setas" alt="Avaliação anterior">
                     </button>
 
                     <div id="avaliacaoBox" class="cor-de-fundo-terciaria sombra"></div>
 
                     <button class="seta-direita" aria-label="Próxima avaliação">
-                        <img src="imagens/secao-avaliacoes-seta.svg" class="setas" alt="">
+                        <img src="imagens/secao-avaliacoes-seta.svg" class="setas" alt="Próxima avaliação">
                     </button>
 
                 </div>
@@ -236,43 +255,29 @@
         <section class="container cor-de-fundo-principal">
             <div class="secao-beneficios">
 
-                <h2 class="titulo cor-texto-amarelo">Benefícios que fazem a diferença!</h2>
-
-                <div class="agrupamento-secao-beneficios">
-
-                    <ul class="lista-beneficios cor-texto-branco">
-                        <li><img src="imagens/secao-beneficios-check.svg" alt="" class="imagem-secao-beneficios-check"> Apoio emocional especializado</li>
-                        <li><img src="imagens/secao-beneficios-check.svg" alt="" class="imagem-secao-beneficios-check"> Assistência funeral completa</li>
-                        <li><img src="imagens/secao-beneficios-check.svg" alt="" class="imagem-secao-beneficios-check"> Seguro de vida</li>
-                        <li><img src="imagens/secao-beneficios-check.svg" alt="" class="imagem-secao-beneficios-check"> Diversidade de planos</li>
-                        <li><img src="imagens/secao-beneficios-check.svg" alt="" class="imagem-secao-beneficios-check"> Controle total do seu plano</li>
-                        <li><img src="imagens/secao-beneficios-check.svg" alt="" class="imagem-secao-beneficios-check"> Suporte em todo o Brasil</li>
-                    </ul>
-
-                    <div>
-                        <img src="imagens/secao-beneficios.webp"  class="imagem-secao-beneficios" alt="Família em momento de união" loading="lazy">
-                    </div>
-
-                </div>
-
-            </div>
-        </section>
-
-        <!-- FAMÍLIA -->
-        <section class="container cor-de-fundo-terciaria">
-            <div class="secao-familia">
-
-                <img src="imagens/secao-familia.webp" alt="Família protegida pelo plano" class="imagem-secao-familia" loading="lazy">
-
-                <div class="familia-texto-alinhamento">
-                    <h2 class="titulo cor-texto-azul">Proteção para sua família!</h2>
-                    <ul class="lista-beneficios-familia cor-texto-azul">
-                        <li>Inclua pais, filhos, cônjuges e pessoas que você ama no mesmo plano.</li>
-                        <li>Economize ao reunir todos num só plano</li>
-                        <li><span class="cor-texto-amarelo"><strong>Baixe </strong></span> o app e faça agora a cotação!</li>
-                    </ul>
-                </div>
-
+            <h2 class="titulo-lista-beneficios cor-texto-amarelo">Benefícios que fazem a diferença!</h2>
+            <ul class="lista-beneficios cor-texto-branco">
+                <li>
+                    <i class="fa-solid fa-circle-check icone-beneficio"></i>
+                    <p>Descontos em consultas com psicólogos qualificados</p>            
+                </li>
+                <li>
+                    <i class="fa-solid fa-circle-check icone-beneficio"></i>
+                    <p>Assistência funeral completa, todos os custos do funeral por nossa conta</p>
+                </li>
+                <li>
+                    <i class="fa-solid fa-circle-check icone-beneficio"></i>
+                    <p>Seguro de vida para acidentes de até<span class="preco2 cor-texto-amarelo"> R$ 10.000,00</span></p>
+                </li>
+                <li>
+                    <i class="fa-solid fa-circle-check icone-beneficio"></i>
+                    <p>Controle total do seu plano direto do aplicativo</p>
+                </li>
+                <li>
+                    <i class="fa-solid fa-circle-check icone-beneficio"></i>
+                    <p>Atendimento e cobertura em todo o Brasil</p>
+                </li>
+            </ul>
             </div>
         </section>
 
@@ -280,27 +285,34 @@
         <section class="container cor-de-fundo-principal">
             <div class="secao-ultima-chamada">
 
-                <div class="secao-botao-posicionamento">
+                <h2 class="ultima-chamada-titulo cor-texto-amarelo">
+                    Proteja quem você ama com poucos cliques
+                </h2>
 
-                    <img src="imagens/banner-footer.webp" alt="Publicidade do aplicativo Plano Luz" class="imagem-secao-ultima-chamada" loading="lazy">
+                <p class="texto secao-ultima-chamada-texto cor-texto-branco">
+                Contrate sua assistência funeral direto pelo aplicativo,
+                com cobertura nacional, seguro de vida e benefícios em vida.
+                Diretamente do conforto de sua casa, sem burocracia!
+                </p>
 
-                    <div class="grupo-botao posicionamento">
+                <button
+                    type="button"
+                    class="botao-baixar-footer sombra"
+                    aria-label="Baixar o aplicativo Plano Luz"
+                    data-track="app_download"
+                    data-store="variavel"
+                    data-label="principal"
+                    onclick="
+                        fbq('track','Download');
+                        redirecionarParaLoja();
+                    ">
+                    Comece agora
+                </button>
+                                
+                <div class="plataformas">
 
-                        <!-- Botão Google Play (Footer) -->
-                    <a href="https://play.google.com/store/apps/details?id=com.planoluzapp&pcampaignid=web_share"
-                       aria-label="Baixar o aplicativo Plano Luz na Google Play"
-                       id="play-store" 
-                       target="_blank" rel="noopener noreferrer"
-                       data-track="app_download"
-                       data-store="google_play"
-                       data-label="footer"
-                       onclick="fbq('track','Lead');
-                                fbq('trackCustom','Download');">
-                        <img src="imagens/botao-google-play.webp" alt="Disponível na Google Play" class="botao-link-app" loading="lazy">
-                    </a>
-
-                        <!-- Botão App Store (Footer) -->
-                    <a href="https://apps.apple.com/br/app/plano-luz-planos-funer%C3%A1rios/id6749597330"
+                <!-- Botão App Store (Footer) -->
+                <a href="https://apps.apple.com/br/app/plano-luz-planos-funer%C3%A1rios/id6749597330"
                        aria-label="Baixar o aplicativo Plano Luz na App Store"
                        id="app-store" 
                        target="_blank" rel="noopener noreferrer"
@@ -309,33 +321,22 @@
                        data-label="footer"
                        onclick="fbq('track','Lead');
                                 fbq('trackCustom','Download');">
-                        <img src="imagens/botao-app-store.webp" alt="Disponível na App Store" class="botao-link-app" loading="lazy">
-                    </a>
-                    </div>
-
-                </div>
-
-                <h2 class="titulo secao-ultima-chamada-titulo cor-texto-amarelo">
-                    Assistência funeral acessível, rápida e segura!
-                </h2>
-                <div class="alinhamento">
-                <p class="texto secao-ultima-chamada-texto cor-texto-branco">
-                    Proteção completa para sua família por um preço acessível. Baixe o app e contrate em menos de 5 minutos.
-                </p>
-
-                    <a 
-                       aria-label="Baixar o aplicativo Plano Luz"
-                       rel="noopener noreferrer"
+                <img src="imagens/botao-app-store.webp" alt="Disponível na App Store" class="botao-link-app" loading="lazy">
+                </a>  
+                    
+                <!-- Botão Google Play (Footer) -->
+                <a href="https://play.google.com/store/apps/details?id=com.planoluzapp&pcampaignid=web_share"
+                       aria-label="Baixar o aplicativo Plano Luz na Google Play"
+                       id="play-store" 
+                       target="_blank" rel="noopener noreferrer"
                        data-track="app_download"
-                       data-store="variavel"
+                       data-store="google_play"
                        data-label="footer"
                        onclick="fbq('track','Lead');
-                                fbq('trackCustom','Download');
-                                redirecionarParaLoja()">
-                       
-                        <button class="botao-baixar sombra">Baixar app!</button>
-                    </a>
-                </div>
+                                fbq('trackCustom','Download');">
+                <img src="imagens/botao-google-play.webp" alt="Disponível na Google Play" class="botao-link-app" loading="lazy">
+                </a>
+                </div>      
             </div>
         </section>
 

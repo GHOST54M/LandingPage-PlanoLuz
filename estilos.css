@@ -28,6 +28,9 @@
 font-family: "Plus Jakarta Sans", sans-serif;
 }
 
+p{
+	line-height: 1.6;
+}
 .cor-de-fundo-principal{
 background-color: var(--cor-primaria);
 
@@ -55,13 +58,6 @@ color: var(--cor-secundaria);
 color: var(--cor-branco);
 }
 
-.titulo{
-	font-size: 21px;
-	font-weight: 700;
-	text-align: center;
-	margin-bottom: 10px;
-}
-
 .texto{
 	font-size: 14px;
 	text-align: center;
@@ -69,18 +65,6 @@ color: var(--cor-branco);
 
 .sombra{
 	box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.2);
-}
-
-.sombra-interna{
--webkit-box-shadow: 
-	inset 0 8px 8px -8px rgba(66, 68, 90, 1),
-	inset 0 -8px 8px -8px rgba(66, 68, 90, 1);
--moz-box-shadow: 
-	inset 0 8px 8px -8px rgba(66, 68, 90, 1),
-	inset 0 -8px 8px -8px rgba(66, 68, 90, 1);
-box-shadow: 
-	inset 0 8px 8px -8px rgba(66, 68, 90, 1),
-	inset 0 -8px 8px -8px rgba(66, 68, 90, 1);
 }
 
 .botao-baixar{
@@ -96,14 +80,19 @@ box-shadow:
 	margin-bottom: 20px;
 }
 
-.secao-chamada1,.secao-planoluz,.secao-comofunciona,.secao-apoioemocional, .secao-beneficios, .secao-tutorial, .secao-avaliacao, .secao-familia{
+.secao-chamada1,.secao-planoluz, .secao-beneficios, .secao-tutorial, .secao-avaliacao{
 	padding:30px 5px;
 } 
+.secao-logo{
+    width: 100%;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.05);
+    display: flex;
+    justify-content: center;		
+}
 
 .logo-plano-luz{
 	padding-top:30px;
 	width: 100%;
-	border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .secao-chamada1{
@@ -133,7 +122,13 @@ box-shadow:
 	font-weight: 300;
 
 }
-
+.planos{
+	font-size: 18px;
+}
+.preco{
+	font-size: 30px;
+	font-weight: 700;
+}
 .grupo-botao{
 	display: flex;
 }
@@ -152,7 +147,8 @@ box-shadow:
 
 .titulo-plano-luz{
 	font-size: 34px;
-	margin-top: 40px;
+	margin-top: 30px;
+	margin-bottom: 15px;
 }
 
 .texto-planoluz{
@@ -188,60 +184,63 @@ box-shadow:
 }
 
 .beneficio{
-	width: 320px;
-	border-radius: 15px;
-	height: 60px;
-	margin:15px;
-	background-color: ;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	font-weight: 600;
-	font-size: 18px;
+	width: 280px;
+	height: 230px;
+	padding: 10px;
+	margin:20px;
+	border-radius: 15px;	
+	background-color: rgba(255, 255, 255, 0.04);
 	box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.2);
 	border: 1px solid rgba(255, 255, 255, 0.1);
-}
-.beneficio {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    font-size: 16px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-evenly;
+
 }
 
-.beneficio {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    font-size: 16px;
+.titulo-benef{
+	font-size: 21px;
+	font-weight: 600;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+.desc-beneficio{
+	font-size: 18px;
+	font-weight: 300;
+	width: 260px;
+	margin-top: 10px;
+	margin-bottom: 10px;	
 }
 
-/* Estilo base do ícone */
 .beneficio i {
-    width: 38px;
-    height: 38px;
+    width: 56px;
+    height: 56px;
+    border-radius: 16px;
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 50%;
-    font-size: 17px;
+    font-size: 24px;
+    margin-bottom: 1rem;
 }
 
-/* BRASIL */
 .beneficio-brasil i {
-    background-color: #eafaf1; /* verde claro */
-    color: #27ae60;           /* verde forte */
+    background-color: rgba(37, 99, 235, 0.20);
+    color: #60A5FA;
 }
 
-/* GRUPO */
 .beneficio-grupo i {
-    background-color: #ebf5fb; /* azul claro */
-    color: #2980b9;            /* azul forte */
+    background-color: rgba(255, 215, 0, 0.20);
+    color: #FFD700;
 }
 
-/* CASA */
 .beneficio-casa i {
-    background-color: #fef5e7; /* laranja claro */
-    color: #e67e22;            /* laranja forte */
+    background-color: rgba(239, 68, 68, 0.20);
+    color: #F87171;
+}
+.beneficio-vida i {
+    background-color: rgba(34, 197, 94, 0.20); /* verde suave */
+    color: #4ADE80; /* green-400 */
 }
 
 .secao-tutorial{
@@ -249,11 +248,13 @@ box-shadow:
 	flex-direction: column;
 
 }
+
 .titulo-secao-tutorial{
-	font-size: 30px;
+	font-size: 34px;
 	font-weight: 600;
 	text-align: center;
 }
+
 .secao-tutorial-passo-a-passo{
 	display: flex;
 	justify-content:space-around;
@@ -271,15 +272,15 @@ box-shadow:
 	flex-direction: column;
 	align-items: center;
 	justify-content: space-evenly;
-	background-color: var(--cor-branco);
+	background-color: rgba(255, 255, 255, 0.04);
 }
 
 .tutorial-textos-botao{
-	height: 200px;
-	margin-top: 10px;
+	height: 250px;
+	margin-top: 30px;
 	display: flex;
 	flex-direction: column;
-	justify-content: space-evenly;
+	justify-content: space-between;
 	align-items: center;
 }
 
@@ -289,52 +290,35 @@ box-shadow:
 	text-align: center;
 
 }
-
-.imagem-secao-tutorial{
-	width: 50px;
-	height: 50px;
+.icone-tutorial {
+    width: 56px;
+    height: 56px;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    text-decoration: none;
+    transition: transform 0.3s ease;
 }
 
-.secao-beneficios{
-	display: flex;
-	flex-direction: column;
-
+.icone-tutorial:hover {
+    transform: scale(1.1);
 }
 
-.agrupamento-secao-beneficios{
-	display: flex;
-	justify-content: space-around;
-
+.tutorial-download {
+    background-color: rgba(37, 99, 235, 0.20); /* blue-600/20 */
+    color: #60A5FA; /* blue-400 */
 }
 
-.imagem-secao-beneficios-check{
-	width: 14px;
-	height: 14px;
-	background-color: var(--cor-secundaria);
-	margin-right: 4px;
-	
+.tutorial-cadastro {
+    background-color: rgba(255, 215, 0, 0.20); /* brand-accent/20 */
+    color: #FFD700; /* brand-accent */
 }
 
-.lista-beneficios{
-	align-self: center;
-	font-size: 14px;
-	display: flex;
-	flex-direction: column;
-
-}
-
-ul li{
-	margin-bottom: 10px;
-	display: inline-flex;
-	align-items: center;
-}
-
-.imagem-secao-beneficios{
-	width: 160px;
-	border-radius: 15px;
-    background: linear-gradient(to right, rgba(17,17,17,0.8), rgba(17,17,17,0));
-    backdrop-filter: blur(8px); /* desfoca o que está atrás */
-    -webkit-backdrop-filter: blur(8px);
+.tutorial-contrato {
+    background-color: rgba(34, 197, 94, 0.20); /* green-500/20 */
+    color: #4ADE80; /* green-400 */
 }
 
 .secao-avaliacao {
@@ -346,6 +330,20 @@ ul li{
 
 .cabecalho-avaliacao {
     margin-bottom: 20px;
+}
+
+.titulo-secao-avaliacao{
+	font-size: 30px;
+	font-weight: 600;
+	text-align: center;
+	margin-top: 15px;
+	margin-bottom: 15px;
+}
+
+.subtitulo-avaliacao{
+	font-size: 18px;
+	font-weight: 400;
+
 }
 
 .carrossel {
@@ -385,8 +383,8 @@ ul li{
 #avaliacaoBox {
     position: relative;
     overflow: hidden;
-    width: 220px;
-    height: 220px;
+    width: 240px;
+    height: 260px;
     border-radius: 15px;
     transition: opacity .4s ease;
 }
@@ -397,8 +395,8 @@ ul li{
 	flex-direction: column;
 	justify-content: space-evenly;
 	align-items: center;
-    width: 220px;
-    height: 200px;
+    width: 240px;
+    height: 240px;
     top: 0;
     left: 0;
     transform: translateX(0);
@@ -441,137 +439,108 @@ ul li{
     margin-top: 25px;
 }
 
-.secao-familia{
-	height: 170px;
-	display: flex;
-	justify-content: space-around;
-	align-items: flex-start;
-}
-
-.familia-texto-alinhamento{
+.secao-beneficios{
 	display: flex;
 	flex-direction: column;
+	align-items: center;
+
+}
+
+.icone-beneficio {
+    color: var(--cor-secundaria);
+    font-size: 1.1rem;
+    margin-right: 0.5rem;
+    flex-shrink: 0;
+}
+
+.titulo-lista-beneficios{
+	font-size: 30px;
+	font-weight: 600;
+	text-align: center;
+	margin-bottom: 15px;
+}
+
+.lista-beneficios{
+	font-size: 18px;
+	font-weight: 200;
+}
+
+.lista-beneficios > li {
+	width: 310px;
+	height: 110px;
+	margin: 20px 0px;
+    background-color: rgba(255, 255, 255, 0.04);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+	border-radius: 10px;
+	display: flex;
 	align-items: center;
 	justify-content: space-evenly;
 }
 
-.secao-familia-titulo{
-	width: 160px;
+.lista-beneficios > li > p{
+	width: 260px;
 }
 
-.lista-beneficios-familia{
-	font-size: 13px;
-	width: 180px;
-}
-.lista-beneficios-familia > li:nth-child(3){
-	display: contents;
+.preco2{
+	position: inline-block;
+	font-weight: 600;
 }
 
-.imagem-secao-familia{
-	width: 140px;
-	height: 140px;
-	border-radius: 20px;
-}
-
-.secao-pets{
-	padding-top: 15px;
-	padding-bottom: 15px;
-	display: flex;
-    flex-direction: column;
-    align-items:center;
-}
-
-.secao-pets-titulo{
-	width: 380px;
-}
-
-.secao-pets-conteudo{
-	display: flex;
-	justify-content: space-evenly;
-}
-
-.secao-pets-texto{
-	width: 225px;
-	font-size: 12px;
-
-}
-
-.lista-beneficios-pets{
-	width: 140px;
-}
-
-.lista-beneficios-pets  > li > img {
-	margin-right: 5px;
-}
-
-.pets-checked{
-	width: 25px;
-	height: 25px;
-	background-color: var(--cor-secundaria);
-	border-radius: 4px;
-}
-
-.secao-pets-texto, .lista-beneficios-pets{
-	display: flex;
-	flex-direction: column;
-	justify-content: space-evenly;
-}
-
-.imagem-secao-pets{
-	width: 140px;
-	height: 188px;
-	border-radius: 15px;
-}
-
-.secao-ultima-chamada{
-	display: flex;
-	padding-right: 10px;
-	margin-bottom: 0px;
-}
-
-.imagem-secao-ultima-chamada{
-	width: 210px;
-	margin-top: 40px;
-}
-
-.info{
-	display: contents;
-}
-
-.posicionamento{
-	align-self: center;
-	margin-top: 60px;
-	margin-left: 25px;
-	position: absolute;
-}
-
-.secao-botao-posicionamento{
-	display: flex;
-}
-
-.alinhamento{
+.secao-ultima-chamada {
+  background-image: 
+    radial-gradient(circle, rgba(0, 0, 30, 0.3) 0%, rgba(0, 0, 30, 0.8) 100%),
+    url('imagens/banner-footer.webp');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 60px 20px;
+  color: white;
+  position: relative;
+  z-index: 0;
 	display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+}
+
+.ultima-chamada-titulo {
+  color: var(--cor-secundaria);
+  font-size: 30px;
+  font-weight: 700;
+  margin-bottom: 16px;
+  text-align: center;
+  text-shadow: #000000 1px 2px 3px;
+}
+
+.secao-ultima-chamada-texto {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 24px;
+  font-weight: 400;
+  text-shadow: #000000 1px 2px 3px;
 
 }
 
-.secao-ultima-chamada-texto{
-	margin-top: 10px;
-	margin-bottom: 15px;
-	font-size: 14px;
-	align-self: center;
+.botao-baixar-footer {
+  background-color: var(--cor-secundaria);
+  color: var(--cor-branco);
+  padding: 12px 24px;
+  border: none;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 1.1rem;
+  transition: background-color 0.3s ease;
 }
 
-.secao-ultima-chamada-titulo{
-	width: 100%;
-	position: absolute;
-	margin-top: 20px;
+.botao-baixar:hover {
+  background-color: #FFC107;
 }
 
 .texto-footer{
-	font-size: 12px;
+	font-size: 14px;
+	font-family:"Plus Jakarta Sans", sans-serif;
 }
 
 .informacoes-empresa > p{
@@ -586,341 +555,155 @@ ul li{
 	padding-top: 25px;
 	padding-bottom: 25px;
 }
+
 @media(max-width: 360px){
-	.secao-tutorial-passo	{
-		width: 75px;
-		height: 90px;
-		font-size: 	10px;
-	}
-	#avaliacaoBox{
-		width:160px;
-		height: 260px;
-	}
-	.avaliacao-item{
-		width: 160px;
-		height: 260px;
-	}
-	.avaliacao-texto{
-		width: 150px;
-	}
-	.avaliacao-avaliador{
-		width: 150px;
-	}
-}
-@media(min-width: 667px){
-.botao-baixar{
-	width: 160px;
-	height: 50px;
-	font-size: 21px;
-
-}
-
-.titulo{
-	font-size: 30px;
-}
-
-.texto{
-	font-size: 18px;
-
-}
-
-.secao-logo{
-	display: flex;
-	justify-content: center;
-}
-
-.logo-plano-luz{
-	width: 500px;
-}
-
-.secao-chamada1{
-    justify-content: space-evenly;
-    height: 220px;
-}
-
-.grupo-botao{
-	display: flex;
-    flex-direction: column;
-
-}
-
-.botao-link-app{
-	width: 180px;
-	margin: 10px;
-}
-
-.texto-secao-chamada1{
-	width: 280px;
-}
-
-.agrupamento-secao-beneficios{
-	margin: 10px;
-	justify-content: space-evenly;
-}
-
-.imagem-secao-beneficios-check{
-	width: 30px;
-	height: 30px;
-	margin-right: 7px;
-	
-}
-
-.lista-beneficios{
-	align-self: center;
-	font-size: 21px;
-	display: flex;
-	flex-direction: column;
-}
-
-.imagem-secao-beneficios{
-	width: 250px;
-}
-
-.secao-tutorial{
-	display: flex;
-	flex-direction: column;
-
-}
-
-.secao-tutorial-passo-a-passo{
-	display: flex;
-	justify-content:space-evenly;
-	margin-top:30px ;
-}
-
-.secao-tutorial-passo{
-	width: 165px;
-	height: 150px;
-	font-size: 18px;
-
-}
-
-.imagem-secao-tutorial{
-	width: 80px;
-	height: 80px;
-
-}
-
-.secao-tutorial-texto-motivador{
-	font-size: 21px;
-	width: 420px;
-
-}
-
-#avaliacaoBox{
-    width: 320px;
-    height: 280px;
-}
-
-.avaliacao-item {
-    width: 320px;
-    height: 280px;
-
-}
-
-.avaliacao-texto{
-	font-size: 21px;
-}
-
-.avaliacao-avaliador{
-	font-size: 23px;
-}
-
-.seta-esquerda, .seta-direita {
-    width: 60px;
-}
-
-.secao-familia{
-	justify-content: space-evenly;
-	height: 190px;
-}
-
-.secao-familia-texto{
-	display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.lista-beneficios-familia{
-	width: 300px;
-	height: 180px;
-	font-size: 18px;
-}
-
-.imagem-secao-familia{
-	width: 200px;
-	height: 200px;
-}
-
-.secao-pets{
-	padding-top: 20px;
-	padding-bottom: 20px;
-}
-
-.secao-pets-texto{
-	width: 340px;
-}
-
-.secao-pets-titulo{
-	width: 420px;
-}
-
-.texto-pets{
-	width: 350px;
-	font-size: 18px;
-}
-
-.lista-beneficios-pets{
-	width: 210px;
-	font-size: 18px;
-}
-
-.imagem-secao-pets{
-	width: 200px;
-	height: 270px;
-}
-
-.secao-ultima-chamada{
-	justify-content: space-between;
-}
-
-.imagem-secao-ultima-chamada{
-	width: 286px;
-	height: 270px;
-	margin-top: 40px;
-}
-
-.posicionamento{
-	margin-left: 185px;
-}
-
-.secao-ultima-chamada-texto{
-	font-size: 18px;
-	width: 272px;
-	align-self: center;
-}
 
 .texto-footer{
-	font-size: 17px;
+	font-size: 12px;
 }
+}
+
+@media(min-width: 667px){
+	.botao-link-app{
+		width: 180px;
+		border-radius: 8px;
+	}
+
+	.secao-chamada1{
+		flex-direction: row;
+		padding: 15px;
+	}
+
+	.botao-baixar{
+		width: 200px;
+		height: 75px;
+		font-size: 30px;
+		border-radius: 20px;
+	}
+
+	.titulo-plano-luz{
+		font-size: 40px;
+	}
+
+	.texto-planoluz{
+		width: 350px;
+		font-size: 21px;
+	}
+
+	.lista-definicao{
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+	.titulo-secao-tutorial{
+		font-size: 40px;
+	}
+
+	.secao-tutorial-passo{
+		width: 180px;
+		height: 180px;
+		font-size: 21px;
+	}
+
+	.icone-tutorial{
+		width: 80px;
+		height: 80px;
+	}
+
+	.secao-tutorial-texto-motivador{
+		width: 450px;
+		font-size: 21px;
+	}
+
+	.beneficio{
+		margin: 10px;
+	}
+
+	.titulo-secao-avaliacao {
+		font-size: 40px;
+	}
+
+	.subtitulo-avaliacao{
+		font-size: 24px;
+	}
+
+	.seta-esquerda, .seta-direita{
+		width: 60px;
+		height: 60px;
+	}
+
+	.setas{
+		width: 60px;
+		height: 60px;
+	}
+
+	#avaliacaoBox{
+		width: 360px;
+		height: 380px;
+
+	}
+
+	.avaliacao-item{
+		width: 360px;
+		height: 360px;
+	}
+
+	.avaliacao-texto, .avaliacao-avaliador{
+		width: 315px;
+		font-size: 21px;
+	}
+
+	.titulo-lista-beneficios{
+		font-size: 40px;
+	}
+
+	.lista-beneficios{
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-around;
+	}
+
+	.ultima-chamada-titulo{
+		font-size: 40px;
+	}
+
+	.secao-ultima-chamada-texto{
+		font-size: 21px;
+	}
+
+	.botao-baixar-footer{
+		font-size: 30px;
+	}
+
+	.texto-footer{
+		font-size: 15px;
+	}
 }
 
 @media(min-width: 1200px){
+	.secao-chamada1,.secao-planoluz,.secao-tutorial, .secao-avaliacao, .secao-beneficios, .secao-ultima-chamada{
+		width: 1200px;
+	}
+
 	.container{
+		width: 100%;
 		display: flex;
 		justify-content: center;
 	}
-	.secao-chamada1, .secao-beneficios, .secao-tutorial, .secao-avaliacao, .secao-familia, .secao-ultima-chamada{
-		width: 1200px;
+
+	.logo-plano-luz{
+		width: 600px;
 	}
-	.botao-baixar:hover{
-		cursor: pointer;
-
+	.texto-secao-chamada1{
+		width: 650px;
 	}
-.titulo{
-	font-size: 38px;
-}
 
-.texto{
-	font-size: 24px;
+	.secao-chamada1{
+		justify-content: space-around;
+	}
 
-}
-
-.logo-plano-luz {
-    width: 600px;
-}
-
-.texto-secao-chamada1{
-	width: 330px;
-}
-
-.lista-beneficios{
-	font-size: 24px;
-}
-
-.imagem-secao-beneficios-check{
-	width: 40px;
-	height: 40px;
-}
-
-.imagem-secao-beneficios{
-	width: 300px;
-}
-
-.posicionamento{
-	margin-left: 327px;
-}
-
-.secao-familia{
-	height: 250px;
-}
-
-.imagem-secao-familia{
-	width: 250px;
-	height: 250px;
-}
-
-.secao-familia-texto{
-	width: 450px;
-	font-size: 24px;
-}
-
-.lista-beneficios-familia{
-	width: 350px;
-	font-size: 24px;
-}
-
-.secao-pets-titulo{
-	width: 700px;
-}
-
-.secao-pets-conteudo{
-	width: 1100px;
-}
-
-.texto-pets{
-	width: 450px;
-	font-size: 24px;
-}
-
-.pets-checked{
-	width: 35px;
-	height: 35px;
-	margin-right: 10px;
-}
-
-.lista-beneficios-pets{
-	width: 350px;
-	font-size: 24px;
-}
-
-.imagem-secao-pets{
-	width: 260px;
-	height: 350px;
-}
-.secao-ultima-chamada{
-	justify-content: space-between;
-}
-
-.imagem-secao-ultima-chamada{
-	margin-top: 60px;
-	width: 370px;
-	height: 360px;
-
-}
-
-.alinhamento{
-	margin-right: 150px;
-}
-
-.secao-ultima-chamada-titulo{
-	width: 1200px;
-	position: absolute;
-	margin-top: 20px;
-}
-.secao-ultima-chamada-texto{
-	width: 320px;
-	font-size: 21px;
-}
+	.lista-definicao{
+		flex-wrap: nowrap;
+	}
 
 }
