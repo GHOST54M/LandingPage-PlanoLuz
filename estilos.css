@@ -91,7 +91,7 @@ color: var(--cor-branco);
 }
 
 .logo-plano-luz{
-	padding-top:30px;
+	padding:10px 0;
 	width: 100%;
 }
 
@@ -116,14 +116,16 @@ color: var(--cor-branco);
 	justify-content: space-evenly;
 }
 
-.texto-secao-chamada1 > p {
+.texto-secao-chamada1 > .texto {
 	margin-bottom: 15px;
 	font-size: 18px;
 	font-weight: 300;
 
 }
 .planos{
-	font-size: 18px;
+	font-size: 21px;
+	font-weight: 600;
+	margin-bottom: 15px;
 }
 .preco{
 	font-size: 30px;
@@ -535,7 +537,9 @@ color: var(--cor-branco);
 }
 
 .botao-baixar:hover {
-  background-color: #FFC107;
+  background-color: #EFA300;
+  cursor: pointer;
+  transition: 0.5s ease;
 }
 
 .texto-footer{
@@ -593,6 +597,7 @@ color: var(--cor-branco);
 	.lista-definicao{
 		display: flex;
 		flex-wrap: wrap;
+		justify-content: center;
 	}
 
 	.titulo-secao-tutorial{
@@ -705,5 +710,4 @@ color: var(--cor-branco);
 	.lista-definicao{
 		flex-wrap: nowrap;
 	}
-
 }
