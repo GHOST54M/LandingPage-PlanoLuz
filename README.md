@@ -36,5 +36,6 @@ Desing responsivo para todas os tamanhos de tela
 - Google Tag Manager
 - Google Analytics
 - Meta Pixel
+- Figma
 
 
